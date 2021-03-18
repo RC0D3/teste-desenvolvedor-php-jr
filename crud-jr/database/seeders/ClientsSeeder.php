@@ -19,7 +19,7 @@ class ClientsSeeder extends Seeder
             DB::table('clientes')->insert([
                 'NomeCliente' => Str::random(10),
                 'CPF' => $this->randomCpf(),
-                'Email' => Str::random(10).'@gmail.com'
+                'Email' => Str::random(3)."@".Str::random(2).".com"
             ]);
         }
     }
@@ -27,7 +27,7 @@ class ClientsSeeder extends Seeder
     private function randomCpf(){
         $temp = "";
         for ($i=0; $i < 11; $i++) { 
-            $temp += random_int(0,9);
+            $temp .= random_int(0,9);
         }
 
         return $temp;

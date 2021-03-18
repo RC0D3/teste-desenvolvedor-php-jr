@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 
 class OrderSeeder extends Seeder
@@ -15,13 +14,12 @@ class OrderSeeder extends Seeder
      */
     public function run()
     {
-        for ($i=0; $i < 3; $i++) { 
+        for ($i=1; $i <= 3; $i++) { 
             DB::table('pedidos')->insert([
                 'DtPedido' => now(),
-                'NomeProduto' => Str::random(10),
                 'Quantidade' => random_int(1, 100),
                 'IdCliente' => $i,
-                'IdProduto' => $i,
+                'IdProduto' => random_int(1, 5),
             ]);   
         }
     }

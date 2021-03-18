@@ -3,9 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use ClientsSeeder;
-use ProductsSeeder;
-use OrderSeeder;
+use Database\Seeders\ClientsSeeder;
+use Database\Seeders\ProductsSeeder;
+use Database\Seeders\OrderSeeder;
 
 class DatabaseSeeder extends Seeder
 {
